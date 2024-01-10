@@ -1,0 +1,1005 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  line-height: 1;
+  color: #333;
+  /* background-color: rgba(255, 192, 203, 0.2); */
+}
+.wrap {
+  width: 100%;
+}
+h1 {
+  font-size: 40px;
+  color: #333;
+}
+h1 strong {
+  font-size: 50px;
+  color: #ffcc00;
+}
+.header {
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  background-color: white;
+}
+/* .header::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    border: 10px solid #333;
+} */
+
+.header .inner {
+  width: 1280px;
+  height: 140px;
+
+  margin: 0 auto;
+}
+
+.header .inner .header_top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  align-items: center;
+}
+
+.header .inner .header_top ul li:hover {
+  /* 애들이 움직임 ㅠㅠ 두껍게도 안됨...폰트를 안불러온듯?! */
+  margin-bottom: 2px;
+  text-decoration: underline;
+  font-weight: 400;
+}
+
+.header .inner .header_top .h_t1 {
+  display: flex;
+  align-items: center;
+}
+.header .inner .header_top .h_t1 a figure {
+  width: 170px;
+  height: 30px;
+}
+.header .inner .header_top .h_t1 a figure img {
+  width: 100%;
+  height: 100%;
+}
+
+.header .inner .header_top .h_t1 ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.header .inner .header_top .h_t2 {
+  display: flex;
+}
+.header .inner .header_top .h_t2 li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+/* ---------------헤더 아래쪽 --------------- */
+
+.header .inner nav {
+  height: 80px;
+  /* background-color: yellowgreen; */
+  text-align: left; /* 아래꺼가운데정렬 */
+  position: relative;
+}
+
+.header .inner nav::before {
+  content: "";
+  width: 100%;
+  height: 300px;
+  background-color: white;
+  display: block;
+  position: absolute;
+  top: 140px; /* 헤더영역이 100px 이라서 내려옴 */
+  left: 0;
+  display: none;
+}
+
+.header .inner nav .gnb .depth01 {
+  display: inline-block;
+  padding: 0 20px;
+  font-size: 16px;
+  font-weight: 800;
+  /* background-color: rgb(150, 150, 255); */
+}
+.header .inner nav .gnb .depth01 > a {
+  line-height: 80px;
+}
+.header .inner nav .gnb .depth01 .depth02_wrap {
+  position: absolute;
+  top: 80px;
+  left: 0%;
+  width: 1280px;
+  color: #333;
+  background-color: white;
+  display: none;
+}
+.header .inner nav .gnb .depth01 .depth02_wrap .depth02 {
+  display: flex;
+  border-bottom: 30px solid #33333330;
+  z-index: 20;
+  /* background-color: yellow; */
+}
+.header .inner nav .gnb .depth01 .depth02 li {
+  padding: 40px 0px 40px 20px;
+}
+.header .inner nav .gnb .depth01 .depth02 li a {
+  border: 1px solid #33333330;
+  border-radius: 20px;
+  padding: 1px 5px;
+}
+
+.header .inner nav .gnb .depth01 .depth02_flex {
+  display: flex;
+  position: absolute;
+  top: 97px;
+  left: 0px;
+  background-color: white;
+  padding-top: 40px;
+}
+.header .inner nav .gnb .depth01 .depth02_flex .depth02-1 {
+  border-right: 1px solid #33333330;
+  padding-bottom: 40px;
+}
+.header .inner nav .gnb .depth01 .depth02_flex ul li {
+  margin-left: 20px;
+  line-height: 50px;
+  letter-spacing: -1.8px;
+}
+
+.header .inner nav .gnb .depth01 .depth02_flex .flex5 {
+  width: calc(1280px / 5);
+}
+.header .inner nav .gnb .depth01 .depth02_flex .flex4 {
+  width: calc(1280px / 4);
+}
+.header .inner nav .gnb .depth01 .depth02_flex .flex3 {
+  width: calc(1280px / 3);
+}
+.header .inner nav .gnb .depth01:hover .depth02_wrap {
+  display: block;
+}
+
+.header .inner nav .gnb .depth01 .depth02_flex .depth02-1 li {
+  font-size: 14px;
+}
+.header .inner nav .gnb .depth01 .depth02_flex .depth02-1 li:nth-child(1) {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+/* -----------------------------------메인 1번 유뷰트------------------------------------ */
+.youtube {
+  margin: 0px auto;
+  width: 100%;
+  /*  height: 600px; */
+  background-color: antiquewhite;
+  z-index: 1;
+}
+.youtube > div {
+  height: 1000px;
+  padding-bottom: 56.25%; /* width 1000px 일때 16:9 비율로 맞춰주는 값  height 값 무시됨 */
+  position: relative;
+}
+.youtube > div iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* -----------------------------------🍗메인 1번 유뷰트 끝------------------------------------ */
+
+/* -----------------------------------🍗🍗메인 2번 반갑습니다 국민카드입니다.------------------------------------ */
+.main02 {
+  width: 1280px;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.main02 h1 {
+  margin-top: 160px;
+  margin-bottom: 40px;
+  color: black;
+}
+.main02 .main02_flex{
+  display: flex;
+  justify-content: space-between;
+}
+.swiper_wrap {
+  width: 844px;
+  height: 320px;
+}
+.swiper_wrap .swiper{
+  width: 100%;
+  height: 100%;
+}
+.swiper_wrap .swiper figure{
+  border-radius: 20px;
+  overflow: hidden;
+}
+.swiper_wrap  .swiper .swiper-button-prev::after,
+.swiper_wrap  .swiper .swiper-button-next::after {
+  font-size: 20px;
+  color: black;
+}
+.swiper-pagination-bullet-active{
+  background-color: #ffcc00;
+}
+/* .swiper-slide {
+  background-color: yellow;
+} */
+
+.main02_login {
+  width: 408px;
+  height: 320px;
+  padding: 40px 40px 0 40px;
+  
+  
+}
+.main02_login ul {
+  display: flex;
+}
+.main02_login ul li {
+  margin-right: 20px;
+}
+.main02_login ul li:nth-child(2) {
+  text-decoration: underline;
+}
+
+.main02_login figure{
+  margin: 20px auto;
+  width: 95px;
+}
+.main02_login figure img{
+  width: 100%;
+  height: 100%;
+}
+.main02_login h4{
+  padding: 14px 0px;
+  margin: 0 auto;
+  background-color: #ffcc00;
+  font-size: 20px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.main02_login .login_3{
+  display: flex;
+  margin-top: 40px;
+  align-items: center;
+}
+.main02_login .login_3 figure{
+  width: 20px;
+  height: 20px;
+  margin: 0;
+}
+
+
+
+
+/* -----------------------------------🍗🍗🍗메인 3번 아이콘 모음------------------------------------ */
+.main03 {
+  width: 1200px;
+  margin: 120px auto;
+}
+.main03 ul {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.main03 ul li p {
+  padding-top: 10px;
+  font-size: 14px;
+}
+.main03 ul li a {
+  display: block;
+}
+/* -----------------------------------메인 3번 아이콘 모음🍗🍗🍗------------------------------------ */
+
+/* -----------------------------------🍗🍗🍗🍗메인 4번 국민카드추천------------------------------------ */
+
+.main04 {
+  width: 1280px;
+  margin: 0 auto;
+}
+.main04 h1 {
+  margin-bottom: 40px;
+}
+.main04 .main04_01 {
+  background-color: #f3f3f3;
+  padding-bottom: 40px;
+  border-radius: 20px;
+}
+.main04 .main04_01 ul {
+  display: flex;
+}
+
+
+.main04 .main04_01 ul li {
+  padding: 40px 0 40px 40px;
+}
+.main04 .main04_01 ul li:nth-child(1) {
+  text-decoration: underline;
+}
+
+.main04 .main04_flex1 {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+.main04 .main04_flex1 .main04_box2 {
+  width: calc(1200px / 3 - 30px);
+  background-color: white;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 20px;
+  padding: 30px;
+}
+.main04 .main04_flex1 .main04_box2 figure {
+  margin: 0 auto;
+  width: 255px;
+  height: 146px;
+}
+.main04 .main04_flex1{
+  position: relative;
+}
+.main04 .main04_flex1 .main04_box2 figure img {
+  width: 100%;
+  height: 100%;
+}
+.main04 .main04_flex1 .main04_box2 h2 {
+  margin-top: 60px;
+  font-weight: 800;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.main04 .main04_flex1 .main04_box2 p {
+  color: #333;
+}
+
+.main04 .main04_flex1 .main04_box2 .main04_hover{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 370px;
+  height: 322px;
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255);
+  padding: 30px;
+  transform: translateY(0%);
+  display: none;
+}
+.main04 .main04_flex1 .main04_box2 .main04_hover p{
+  font-size: 16px;
+  margin-top: 20px;
+}
+.main04 .main04_flex1 .main04_box2 .main04_hover p:first-of-type{
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+.main04 .main04_flex1 .main04_box2 .main04_hover p:last-of-type{
+  margin-top: 40px;
+}
+.main04 .main04_flex1 .main04_box2 .main04_hover h1{
+  font-size: 25px;
+  margin-bottom: 8px;
+}
+
+.main04 .main04_flex1 .main04_box2:hover .main04_hover{
+  display: block;
+  
+}
+
+
+.main04_flex1:hover div{
+  transform: translateY(0);
+}
+.main04 .main04_flex2 {
+  width: 1200px;
+  background-color: white;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+.main04 .main04_flex2 h3 {
+  padding: 40px;
+}
+.main04 .main04_flex2 .main04_flex3 {
+  display: flex;
+  justify-content: space-between;
+}
+.main04 .main04_flex2 .main04_flex3 div p {
+  padding: 0 40px 20px 40px;
+}
+
+/* -----------------------------------메인 4번 국민카드추천🍗🍗🍗🍗------------------------------------ */
+
+/* -----------------------------------🍗🍗🍗🍗🍗메인 5번 간편한 금융서비스------------------------------------ */
+
+.main05 {
+  width: 920px;
+  margin: 0 auto;
+  text-align: center;
+}
+.main05 h1 {
+  margin: 160px 0px 40px 0;
+}
+.main05 .main05_bigbox {
+  display: flex;
+  justify-content: space-between;
+}
+.main05 .main05_bigbox .main05_middlebox {
+  width: 280px;
+}
+.main05 .main05_bigbox .main05_middlebox:nth-child(1),
+.main05 .main05_bigbox .main05_middlebox:nth-child(3) {
+  margin-top: 40px;
+}
+
+.main05 .main05_bigbox .main05_middlebox .main05_smallbox {
+  width: 100%;
+  height: 280px;
+  padding: 30px;
+  background-color: white;
+  margin-top: 40px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 15px rgba(51, 51, 51, 0.212);
+}
+.main05 .main05_bigbox .main05_middlebox .main05_smallbox:hover {
+  box-shadow: 0px 0px 15px #33333350;
+  background-color: #ffcc00;
+}
+
+.main05 .main05_bigbox .main05_middlebox .main05_smallbox figure {
+  width: 25px;
+  height: 25px;
+}
+.main05 .main05_bigbox .main05_middlebox .main05_smallbox figure img {
+  width: 100%;
+  height: 100%;
+}
+.main05 .main05_bigbox .main05_middlebox .main05_smallbox h2 {
+  font-size: 24px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: left;
+  line-height: 28px;
+}
+.main05 .main05_bigbox .main05_middlebox .main05_smallbox p {
+  font-size: 16px;
+  color: #333;
+  text-align: left;
+  line-height: 20px;
+}
+.main05 .main05_bigbox .main05_middlebox .main05_smallbox .main5_look p {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.main05 .main05_bigbox .main05_middlebox .main05_smallbox .main5_look {
+  display: flex;
+  margin-top: 60px;
+  align-items: center;
+}
+.main05
+  .main05_bigbox
+  .main05_middlebox:nth-child(2)
+  .main05_smallbox:nth-child(2)
+  .main5_look {
+  margin-top: 40px;
+}
+
+.main05 .main05_bigbox .main05_middlebox .main05_smallbox .main5_look figure {
+  width: 15px;
+  height: 15px;
+  margin-left: 3px;
+}
+.main05
+  .main05_bigbox
+  .main05_middlebox
+  .main05_smallbox
+  .main5_look
+  figure
+  img {
+  width: 100%;
+  height: 100%;
+}
+
+/* -----------------------------------메인 5번 간편한 금융서비스🍗🍗🍗🍗🍗------------------------------------ */
+
+/* ---------------------------🍗🍗🍗🍗🍗🍗메인 6번 유튜브------------------------------------------ */
+
+.section06 {
+  width: 100%;
+  background-color: #f3f3f3;
+}
+.main06 {
+  width: 1130px;
+  margin: 160px auto;
+  padding: 160px 0;
+  /* background-color: #eeeeee; */
+  border-radius: 20px;
+}
+.main06 h1 {
+  margin-bottom: 40px;
+}
+.main06 h1 strong {
+  color: red;
+}
+.main06 .main06_flex {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.main06 .main06_flex .main06_box {
+  width: 545px;
+  text-align: center;
+  background-color: white;
+  border-radius: 20px;
+}
+.main06 .main06_flex .main06_box .youtube {
+  margin: 40px auto;
+  width: 465px;
+  /* background-color: antiquewhite; */
+}
+.youtube > div {
+  height: 100%;
+  position: relative;
+}
+.youtube > div iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.main06 .main06_flex .main06_box strong {
+  display: block;
+  font-size: 24px;
+  margin-top: 10px;
+}
+.main06 .main06_flex .main06_box strong:nth-child(3) {
+  margin-bottom: 40px;
+}
+
+.main06 .main06_flex .main06_box a .main06_link {
+  display: flex;
+  margin-bottom: 40px;
+}
+.main06 .main06_flex .main06_box a {
+  display: inline-block;
+}
+
+.main06 .main06_flex .main06_box {
+  text-align: center;
+}
+.main06 .main06_flex .main06_box a .main06_link figure {
+  width: 15px;
+  height: 15px;
+}
+.main06 .main06_flex .main06_box a .main06_link figure img {
+  width: 100%;
+  height: 100%;
+}
+/* ---------------------------메인 6번 유튜브 🍗🍗🍗🍗🍗🍗------------------------------------------ */
+
+
+/* ---------------------------🍗🍗🍗🍗🍗🍗🍗메인 7번 혜택&서비스------------------------------------------ */
+
+.main07{
+  width: 1280px;
+  margin: 0 auto;
+}
+.main07 h1{
+  margin-bottom: 40px;
+}
+.main07 .main07_topflex{
+  display: flex;
+  justify-content: space-between;
+}
+
+.main07 .main07_topflex .main07_topbox{
+  width: 408px;
+  height: 120px;
+  box-shadow: 0px 0px 15px rgba(51, 51, 51, 0.212);
+  border-radius: 20px;
+}
+.main07 .main07_topflex .main07_topbox a{
+  display: flex;
+  line-height: 50px;
+  align-items: center;
+  margin-left: 100px;
+}
+.main07 .main07_topflex .main07_topbox:nth-child(1) a figure{
+  width: 120px;
+  height: 120px;
+}
+.main07 .main07_topflex .main07_topbox:nth-child(2) a figure{
+  height: 120px;
+  width: 110px;
+  margin-right: 20px;
+  margin-left: -40px;
+}
+.main07 .main07_topflex .main07_topbox:nth-child(3) a figure{
+  width: 100px;
+  
+}
+
+.main07 .main07_topflex .main07_topbox a figure img{
+  width: 100%;
+  height: 100%;
+}
+.main07 .main07_topflex .main07_topbox:last-child a figure img:last-child{
+  width: 70%;
+}
+.main07 .main07_topflex .main07_topbox:nth-of-type(2) a figure img:last-child{
+  width: 120%;
+}
+.main07 .main07_topflex .main07_topbox a strong{
+  font-size: 30px;
+}
+.main07 .main07_topflex .main07_topbox:hover{
+  box-shadow: 0px 0px 15px #33333350;
+  background-color: #ffcc00;
+}
+.main07 .main07_bottomflex {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 28px;
+}
+
+
+.main07 .main07_bottomflex .main07_bottombox1,
+.main07 .main07_bottomflex .main07_bottombox2,
+.main07 .main07_bottomflex .main07_bottombox3,
+.main07 .main07_bottomflex .main07_bottombox4{
+  width: 300px;
+  padding: 30px 10px 20px 20px;
+  border-radius: 20px;
+}
+.main07 .main07_bottomflex .main07_bottombox1{
+  background-color: #FFFBD3;
+}
+.main07 .main07_bottomflex .main07_bottombox2{
+  background-color: #CEDCFF;
+}
+.main07 .main07_bottomflex .main07_bottombox3{
+  background-color: #FFC8C8;
+}
+.main07 .main07_bottomflex .main07_bottombox4{
+  background-color: #FFCCDE;
+  
+}
+.main07 .main07_bottomflex .main07_bottombox a strong{
+  font-size: 24px;
+  display: block;
+  margin-bottom: 20px;
+}
+.main07 .main07_bottomflex .main07_bottombox a p{
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: -25px;
+}
+.main07 .main07_bottomflex .main07_bottombox a figure{
+  margin-left: auto;
+  width: 128px;
+  height: 104px;
+}
+.main07 .main07_bottomflex .main07_bottombox a figure img{
+  margin-left: auto;
+  width: 100%;
+  height: 100%;
+}
+.main07 .main07_bottomflex .main07_bottombox4 div{
+  margin-bottom: 30px;
+  margin-left: 30px;
+}
+
+.main07 .main07_bottomflex .main07_bottombox4 div a{
+  display: flex;
+}
+.main07 .main07_bottomflex .main07_bottombox4 div a:first-child{
+  margin-top: 20px;
+}
+
+.main07 .main07_bottomflex .main07_bottombox4 div a figure{
+  width: 20px;
+  height: 20px;
+}
+.main07 .main07_bottomflex .main07_bottombox4 div a figure img{
+  width: 100%;
+  height: 100%;
+}
+.main07 .main07_bottomflex .main07_bottombox4 div a strong{
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.main08{
+  width: 1280px;
+  margin: 0 auto;
+}
+.main08 .main08_title{
+  margin-top: 160px;
+  margin-bottom: 0px;
+  display: flex;
+  text-align: center;
+}
+.main08 .main08_title h1{
+  margin-top: 40px;
+}
+
+.main08 .main08_flex01{
+  display: flex;
+  justify-content: space-between;
+}
+.main08 .main08_flex01 .main08_box{
+  margin-top: -5px;
+  background-color: #ffcc00;
+  width: 735px;
+  padding: 40px;
+  border-radius: 20px;
+  /* border: 3px solid #000; */
+}
+.main08 .main08_flex01 .main08_box .main08_flex02{
+  display: flex;
+}
+.main08 .main08_flex01 .main08_box .main08_flex02 ul{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.main08 .main08_flex01 .main08_box .main08_flex02 ul li:first-child{
+  text-decoration: underline;
+}
+
+.main08 .main08_flex01 .main08_box .main08_flex02 ul li{
+  margin-right: 20px;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.main08 .main08_flex01 .main08_box .main08_flex03{
+  display: flex;
+  justify-content: space-between;
+  
+  border-radius: 20px;
+  background-color: white;
+  width: 100%;
+  margin: 0 auto;
+}
+.main08 .main08_flex01 .main08_box .main08_flex03 p{
+  margin-top: 20px;
+  margin-left: 40px;
+  line-height: 30px;
+}
+.main08 .main08_flex01 .main08_box .main08_flex03 figure{
+  width: 100px;
+  height: 100px;
+  margin-right: 40px;
+}
+.main08 .main08_flex01 .main08_box .main08_flex03 figure img{
+  width: 100%;
+  height: 100%;
+}
+.main08 .main08_news{
+ 
+  width: 517px;
+ /*  box-shadow: 0px 0px  30px #ebebeb;
+  padding: 30px;
+  border-radius: 20px; */
+}
+.main08_news a {
+  display: flex;
+  
+}
+.main08_news a p {
+  font-size: 24px;
+  margin-right: 40px;
+}
+
+.main08_news a figure{
+  width: 20px;
+  height: 20px;
+}
+.main08_news a figure img{
+  width: 100%;
+  height: 100%;
+}
+
+.main08 .main08_news div{
+  margin-top: 40px;
+  display: flex;
+}
+.main08 .main08_news div p{
+  margin-right: 40px;
+}
+
+.main08_call {
+  width: 100%;
+  background-color: #CEDCFF;
+  margin-top: 28px;
+  padding: 40px;
+  border-radius: 20px;
+}
+.main08_call .call_flex01{
+  display: flex;
+  justify-content: space-between;
+}
+.main08_call .call_flex01 .call_flex02 {
+  width: 496px;
+  display: flex;
+}
+.main08_call .call_flex01 .call_flex02 div {
+  text-align: center;
+  margin-left: 40px;
+}
+
+.main08_call .call_flex01 .call_flex02 div strong{
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+.main08_call .call_flex01 .call_flex02 div a h4{
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+.main08_call .call_flex01 .call_flex02 div a:last-child{
+  display: block;
+  font-size: 20px;
+  text-align: center;
+  padding: 6px;
+  background-color: white;
+  border: 1px solid #333;
+  /* border-radius: 10px; */
+  margin-top: 3px;
+}
+.main08_call .call_flex01 .call_flex02 figure{
+  width: 100px;
+  height: 100px;
+}
+.main08_call .call_flex01 .call_flex02 figure img{
+  width: 100%;
+  height: 100%;
+}
+
+.main08_call .call_flex01 .call_flex03{
+  margin-left: auto;
+  width: 660px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main08_call .call_flex01 .call_flex03 .call_flex04{
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+.main08_call .call_flex01 .call_flex03 .call_flex04 ul li{
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.main08_call .call_flex01 .call_flex03 .call_flex04 ul li:last-of-type{
+  margin-bottom: 0;
+}
+
+.main08_call .call_flex01 .call_flex03 .call_flex04 ul li a {
+  display: flex;
+}
+
+.main08_call .call_flex01 .call_flex03 .call_flex04 ul li a figure{
+  
+  margin-left: 10px;
+  width: 15px;
+  height: 15px;
+}
+.main08_call .call_flex01 .call_flex03 .call_flex04 ul li a figure img{
+  width: 100%;
+  height: 100%;
+}
+
+.footer{
+  width: 1280px;
+  
+  border-top: 1px solid #888;
+  padding: 20px;
+  margin: 60px auto;
+}
+.footer .footer01 {
+  width: 100%;
+  
+  display: flex;
+}
+.footer .footer01 a{
+  display: block;
+  padding-right: 10px;
+  margin-right: 10px;
+  
+  border-right: 1px solid #888888;
+}
+
+.footer .footer02{
+  margin-top: 40px;
+  display: flex;
+}
+.footer .footer02 p {
+  padding-right: 30px;
+  margin-right: 20px;
+  border-right: 1px solid #333;
+}
+
+.footer span{
+  display: block;
+  margin-top: 40px;
+}
+
+.footer .footer03{
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer .footer03 .footer04{
+  display: flex;
+}
+.footer .footer03 .footer04 figure{
+  width: 60px;
+  margin-right: 30px;
+}
+.footer .footer03 .footer04 figure img{
+  width: 100%;
+}
+
+
+.footer .footer03 .footer05{
+  display: flex;
+  align-items: center;
+}
+.footer .footer03 .footer05 figure {
+  width: 30px;
+  height: 30px;
+  margin-right: 30px;
+}
+.footer .footer03 .footer05 figure img{
+  width: 100%;
+  height: 100%;
+}
+
+.footer .footer03 .footer05 .footer06{
+  display: flex;
+  border: 1px solid #333;
+  padding: 3px;
+  align-items: center;
+}
+.footer .footer03 .footer05 .footer06 p{
+  margin-left: 20px;
+}
+
+.footer .footer03 .footer05 .footer06 figure{
+  width: 20px;
+  height: 20px;
+  margin-left: 20px;
+}
+.footer .footer03 .footer05 .footer06 figure img{
+  width: 100%;
+  height: 100%;
+  rotate: 270deg;
+}
+
