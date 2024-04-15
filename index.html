@@ -7,9 +7,21 @@
   <title>KB국민카드</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/881.css">
+  <script>
+ $(document).ready(function() {
+  $('.header .inner nav .gnb .depth01').hover(
+    function() {
+      $('body').addClass('one').removeClass('two');
+    },
+    function() {
+      $('body').addClass('two').removeClass('one');
+    }
+  );
+});
+  </script>
 </head>
 
-<body>
+<body class="body one two">
   <div id="wrap" class="wrap">
     <header class="header">
       <div class="inner">
